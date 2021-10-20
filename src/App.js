@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React, { useState } from 'react'
 import Alert from "./components/Alert";
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,11 +14,11 @@ import {
 
 function App() {
 
-  // ----------------------------------------Mode:- Dark and Light-----------------------------------
+  // ---------------------------------------- Mode:- Dark and Light -----------------------------------
 
   const [mode, setMode] = useState('light'); // Whether dark mode is enables or not
 
-  // -----------------------Alerts ------------------------:- 
+  // ----------------------- Alerts ------------------------:- 
 
   const [alert, setAlert] = useState(null);
 
@@ -47,7 +46,7 @@ function App() {
 
   const toggleMode = (cls) => {
     // console.log(cls)
-    removeBgClasses(); // Calling this function to remove the onclick classes
+    removeBgClasses(); // Calling this function to remove the onclick classes for different colors
     document.body.classList.add('bg-'+cls); // For other colors
     if(mode === 'light'){
       setMode('dark');
